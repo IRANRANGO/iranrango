@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Iran Rango | VIP Winter</title>
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --glass: rgba(255,255,255,.08);
+  --blue: #3fa9f5;
+  --glow: 0 0 30px #3fa9f5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Vazirmatn",sans-serif}
+
+body{
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1548777123-e216912df7d8?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* SNOW */
+canvas{position:fixed;inset:0;z-index:1;pointer-events:none}
+
+/* LOADER */
+#loader{
+  position:fixed;inset:0;
+  background:#02040a;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+.loader-box{text-align:center}
+.loader-box span{font-size:90px}
+.loader-bar{
+  width:260px;height:6px;
+  background:#ffffff30;
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:25px;
+}
+.loader-bar::after{
+  content:"";
+  display:block;
+  height:100%;
+  width:100%;
+  background:linear-gradient(90deg,#00c6ff,#0072ff);
+  animation:load 3s linear forwards;
+}
+@keyframes load{from{width:0}}
+
+/* MAIN */
+.container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:5}
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(20px);
+  border-radius:30px;
+  padding:50px;
+  box-shadow:0 40px 100px rgba(0,0,0,.8);
+}
+
+/* HERO */
+.hero{text-align:center;margin-bottom:60px}
+.hero .icon{
+  font-size:90px;
+  animation:pulse 2s infinite;
+  text-shadow:0 0 20px #00c6ff;
+}
+.hero h1{font-size:48px;font-weight:900}
+.hero p{opacity:.9;font-size:18px}
+.badge{
+  display:inline-block;
+  margin:15px 0;
+  padding:8px 24px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+@keyframes pulse{50%{transform:scale(1.08)}}
+
+/* BUTTONS */
+.actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:40px 0}
+.btn{
+  padding:18px 44px;
+  border-radius:22px;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  transition:.3s;
+}
+.btn-buy{background:linear-gradient(135deg,#00c6ff,#0072ff)}
+.btn-bot{background:linear-gradient(135deg,#7f5cff,#3f7bff)}
+.btn:hover{transform:translateY(-6px)}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+}
+.feature{
+  background:rgba(255,255,255,.07);
+  border-radius:22px;
+  padding:30px;
+  text-align:center;
+  transition:.3s;
+}
+.feature:hover{transform:translateY(-10px)}
+.feature .icon{font-size:42px;margin-bottom:10px}
+
+/* FLOAT ICON */
+.floating{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:65px;height:65px;
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  box-shadow:0 0 40px #00c6ff;
+  animation:float 3s ease-in-out infinite;
+  z-index:99;
+}
+@keyframes float{50%{transform:translateY(-12px)}}
+
+footer{text-align:center;margin-top:70px;opacity:.6}
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+  <div class="loader-box">
+    <span>🤖❄️</span>
+    <h2>Iran Rango</h2>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<canvas id="snow"></canvas>
+
+<div class="floating">⚡</div>
+
+<div class="container">
+  <div class="glass">
+
+    <div class="hero">
+      <div class="icon">🤖❄️</div>
+      <span class="badge">نسخه زمستانی VIP</span>
+      <h1>ایران رنگو</h1>
+      <p>هوش مصنوعی فارسی • سریع • حرفه‌ای • همیشه آنلاین</p>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-buy" onclick="alert('برای خرید پیام بده:\nbenyamin5486')">🔥 خرید اشتراک</button>
+      <a class="btn btn-bot" href="https://ble.ir/iranrangobot">🤖 ورود به ربات</a>
+    </div>
+
+    <div class="features">
+      <div class="feature"><div class="icon">🌍</div><h3>چندزبانه</h3><p>پشتیبانی کامل از زبان‌ها</p></div>
+      <div class="feature"><div class="icon">📄</div><h3>تحلیل PDF</h3><p>پردازش فایل</p></div>
+      <div class="feature"><div class="icon">🎤</div><h3>تبدیل صوت</h3><p>ویس به متن</p></div>
+      <div class="feature"><div class="icon">🖼️</div><h3>تحلیل تصویر</h3><p>تشخیص محتوا</p></div>
+      <div class="feature"><div class="icon">✍️</div><h3>پرامپت نویسی</h3><p>تولید متن حرفه‌ای</p></div>
+      <div class="feature"><div class="icon">⚡</div><h3>۲۴ ساعته</h3><p>همیشه فعال</p></div>
+    </div>
+
+    <footer>ساخته شده توسط <b>BM PERSIAN STUDIO</b> © 2025</footer>
+  </div>
+</div>
+
+<script>
+setTimeout(()=>document.getElementById("loader").style.display="none",3000);
+
+/* Snow */
+const c=document.getElementById("snow"),ctx=c.getContext("2d");
+function resize(){c.width=innerWidth;c.height=innerHeight}
+resize();window.onresize=resize;
+let flakes=[];
+for(let i=0;i<130;i++)
+  flakes.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*3+1,s:Math.random()+.5});
+(function snow(){
+  ctx.clearRect(0,0,c.width,c.height);
+  ctx.fillStyle="white";
+  flakes.forEach(f=>{
+    ctx.beginPath();
+    ctx.arc(f.x,f.y,f.r,0,Math.PI*2);
+    ctx.fill();
+    f.y+=f.s;
+    if(f.y>c.height){f.y=0;f.x=Math.random()*c.width}
+  });
+  requestAnimationFrame(snow);
+})();
+</script>
+
+</body>
+</html>
